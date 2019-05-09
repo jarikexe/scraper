@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Parsser output</title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jquery.json-viewer@1.2.0/json-viewer/jquery.json-viewer.css" />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/jquery.json-viewer@1.2.0/json-viewer/jquery.json-viewer.js"></script>
+</head>
+<body>
+<pre id="json-renderer"></pre>
+
+<script type="text/javascript">
+$(function(){
+	$.getJSON( "http://149.28.135.26/output.json", function( data ) {
+		$('#json-renderer').jsonViewer(data);
+	});	
+});
+</script>
+</body>
+</html>
